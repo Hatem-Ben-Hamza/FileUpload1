@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+    	{{ form_row(form.file1) }}
+    	{{ form_row(form.file2) }}
+    	<input type="submit" value="upload">
+    {{ form_end(form) }}
+{% endblock %}

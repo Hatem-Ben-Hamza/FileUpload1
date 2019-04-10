@@ -1,0 +1,43 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
+/**
+ * UploadFileTest
+ *
+ * @ORM\Table(name="upload_file_test")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\UploadFileTestRepository")
+ */
+class UploadFileTest
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+    /* @ORM\Column(type="string")
+    /* @Assert\NotBlank(message="this fild cannot be empty")
+    /* @Assert\File(mimeTypes={"application/pdf"})
+    */
+
+    protected $file;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+}
+
